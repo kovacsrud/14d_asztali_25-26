@@ -50,7 +50,23 @@
 
             Console.WriteLine(modositandoCh);
 
+            //Írjon programot, amely meghatározza a szövegben található számjegyek összegét!
 
+            string szovegEsSzam = "Ebben az 1 szövegben 2 vannak számok 4";
+
+            char[] szovegEsSzamChar=szovegEsSzam.ToCharArray();
+
+            int osszeg = 0;
+
+            for (int i = 0; i < szovegEsSzamChar.Length; i++)
+            {
+                if (Char.IsNumber(szovegEsSzamChar[i]))
+                {
+                    osszeg += (int)Char.GetNumericValue(szovegEsSzamChar[i]);
+                }
+            }
+
+            Console.WriteLine($"Az összeg:{osszeg}");
         }
     }
 }

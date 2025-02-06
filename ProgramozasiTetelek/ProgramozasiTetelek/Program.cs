@@ -131,6 +131,33 @@
             }
             Console.WriteLine($"Min:{min},max:{max}");
 
+            //Rendezés
+
+            for (int i = 0; i < szamok.Length-1; i++)
+            {
+                for (int j = i+1; j < szamok.Length; j++)
+                {
+                    //csere
+                    if (szamok[i] > szamok[j])
+                    {
+                        int temp=szamok[i];
+                        szamok[i]=szamok[j];
+                        szamok[j]=temp;
+                    }
+                }
+            }
+
+            Console.WriteLine("A Rendezett tömb:");
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                Console.Write(szamok[i]+" ");
+            }
+
+            
+
         }
+
+
+
     }
 }

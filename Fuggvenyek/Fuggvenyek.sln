@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuggvenyek", "Fuggvenyek\Fuggvenyek.csproj", "{D67726DC-8E17-4BA0-8A2D-7811B5E389E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuggvenyekErtekkel", "FuggvenyekErtekkel\FuggvenyekErtekkel.csproj", "{BE07AFBF-BF76-45EA-A199-9C1863A3BD78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuggvenygeneralas", "Fuggvenygeneralas\Fuggvenygeneralas.csproj", "{508E5B31-8F8A-4F1B-9446-168F99418903}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D67726DC-8E17-4BA0-8A2D-7811B5E389E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D67726DC-8E17-4BA0-8A2D-7811B5E389E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D67726DC-8E17-4BA0-8A2D-7811B5E389E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE07AFBF-BF76-45EA-A199-9C1863A3BD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE07AFBF-BF76-45EA-A199-9C1863A3BD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE07AFBF-BF76-45EA-A199-9C1863A3BD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE07AFBF-BF76-45EA-A199-9C1863A3BD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508E5B31-8F8A-4F1B-9446-168F99418903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508E5B31-8F8A-4F1B-9446-168F99418903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508E5B31-8F8A-4F1B-9446-168F99418903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508E5B31-8F8A-4F1B-9446-168F99418903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

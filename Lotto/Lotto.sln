@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotto", "Lotto\Lotto.csproj", "{89ED1D51-FBFE-4086-8607-3707E9A1244D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LottoListaval", "LottoListaval\LottoListaval.csproj", "{BD1FEA3E-2F20-49BE-8324-4ABC3757845D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{89ED1D51-FBFE-4086-8607-3707E9A1244D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89ED1D51-FBFE-4086-8607-3707E9A1244D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89ED1D51-FBFE-4086-8607-3707E9A1244D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1FEA3E-2F20-49BE-8324-4ABC3757845D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1FEA3E-2F20-49BE-8324-4ABC3757845D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1FEA3E-2F20-49BE-8324-4ABC3757845D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1FEA3E-2F20-49BE-8324-4ABC3757845D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

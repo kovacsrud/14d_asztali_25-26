@@ -27,8 +27,8 @@ namespace Osztalyok
                 }
             }
         }
-        public int Magassag { get; set; }
-        public int Suly { get; set; }
+        public uint Magassag { get; set; }
+        public uint Suly { get; set; }
         public string Lakhely { get; set; }
 
 

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaOsztallyal", "ListaOsztallyal\ListaOsztallyal.csproj", "{2F09B3B7-7B69-4F49-A685-53183129D9CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F09B3B7-7B69-4F49-A685-53183129D9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F09B3B7-7B69-4F49-A685-53183129D9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F09B3B7-7B69-4F49-A685-53183129D9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F09B3B7-7B69-4F49-A685-53183129D9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91FC47BE-BF9B-4602-A37A-7C477B45FA17}
+	EndGlobalSection
+EndGlobal

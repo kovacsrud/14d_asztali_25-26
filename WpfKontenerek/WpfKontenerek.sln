@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfKontenerek", "WpfKontenerek\WpfKontenerek.csproj", "{91FEFF07-2A49-4752-AF22-CD12E99CBCE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDinamikusElemek", "WpfDinamikusElemek\WpfDinamikusElemek.csproj", "{81376EC3-731F-4687-BF07-1312E823D6E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91FEFF07-2A49-4752-AF22-CD12E99CBCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91FEFF07-2A49-4752-AF22-CD12E99CBCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91FEFF07-2A49-4752-AF22-CD12E99CBCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91FEFF07-2A49-4752-AF22-CD12E99CBCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81376EC3-731F-4687-BF07-1312E823D6E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81376EC3-731F-4687-BF07-1312E823D6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81376EC3-731F-4687-BF07-1312E823D6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81376EC3-731F-4687-BF07-1312E823D6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AF481A0-34A0-43B4-9816-9EC61EB2BEED}
+	EndGlobalSection
+EndGlobal

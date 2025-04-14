@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfTabs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTabs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Adatok 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <DataGrid Grid.ColumnSpan="3" Grid.Row="0"  />
+                <Button Content="Gomb1" Grid.Row="1" Width="100" Height="30" />
+                <Button Content="Gomb2" Grid.Row="1" Grid.Column="1" Width="100" Height="30" />
+                <Button Content="Gomb3" Grid.Row="1" Grid.Column="2" Width="100" Height="30" />
+
+            </Grid>
+        </TabItem>
+        <TabItem Header="Adatok 2">
+            <Grid>
+
+            </Grid>
+        </TabItem>
+        <TabItem Header="Adatok 3">
+            <Grid>
+
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</Window>

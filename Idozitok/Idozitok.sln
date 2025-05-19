@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonzolIdozito", "KonzolIdozito\KonzolIdozito.csproj", "{8AEFF0DB-1AF2-44E2-B519-B5256C2DED08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIdozito", "WpfIdozito\WpfIdozito.csproj", "{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AEFF0DB-1AF2-44E2-B519-B5256C2DED08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEFF0DB-1AF2-44E2-B519-B5256C2DED08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEFF0DB-1AF2-44E2-B519-B5256C2DED08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEFF0DB-1AF2-44E2-B519-B5256C2DED08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE1CA279-5DD2-4DBE-B816-D5FE581E168C}
+	EndGlobalSection
+EndGlobal

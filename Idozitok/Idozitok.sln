@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonzolIdozito", "KonzolIdoz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIdozito", "WpfIdozito\WpfIdozito.csproj", "{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSlideshow", "WpfSlideshow\WpfSlideshow.csproj", "{BE3EBB1C-8B64-4E16-9F42-E56FC8F5EC77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D7A61A-38DF-4A98-ADE9-A3D4FE424E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3EBB1C-8B64-4E16-9F42-E56FC8F5EC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3EBB1C-8B64-4E16-9F42-E56FC8F5EC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3EBB1C-8B64-4E16-9F42-E56FC8F5EC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3EBB1C-8B64-4E16-9F42-E56FC8F5EC77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

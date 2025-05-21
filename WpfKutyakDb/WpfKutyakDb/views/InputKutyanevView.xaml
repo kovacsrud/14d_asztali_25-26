@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfKutyakDb.views.InputKutyanevView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKutyakDb.views"
+        mc:Ignorable="d"
+        Title="InputKutyanevView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textblockCim" Text="Új kutyanév felvitele" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <TextBox x:Name="textboxKutyanev" Grid.Row="1"  Height="40" Width="400" FontSize="28"/>
+        <Button x:Name="buttonMent" Content="Mentés" Grid.Row="2" FontSize="20" Width="200" Height="40" Click="buttonMent_Click"/>
+
+    </Grid>
+</Window>

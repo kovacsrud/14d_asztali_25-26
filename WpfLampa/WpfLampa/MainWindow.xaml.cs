@@ -66,6 +66,11 @@ public partial class MainWindow : Window
         Canvas.SetTop(zoldLampa, 10 + koz + sargaLampa.Height + koz + zoldLampa.Height);
         canvasLampa.Children.Add(zoldLampa);
 
+        Lampa lampa = new Lampa(100, 300);
+        Canvas.SetLeft(lampa, 10);
+        Canvas.SetTop(lampa, 10);
+        canvasLampa.Children.Add(lampa);
+
         //Thread.Sleep(15000); //Blokkolja a program fő szálát, tehát az ablak nem tud megjelenni :(
 
         await Task.Delay(10000);

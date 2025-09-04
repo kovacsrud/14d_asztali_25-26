@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfMobilok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMobilok"
+        mc:Ignorable="d"
+        Title="Mobil adatok" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Menu FontSize="22">
+            <MenuItem Header="Fájl">
+                <MenuItem x:Name="menuItemMegnyitas" Header="Megnyitás" Click="menuItemMegnyitas_Click"/>
+                <MenuItem x:Name="menuItemMentes" Header="Mentés" />
+                <MenuItem x:Name="menuItemMentesMaskent" Header="Mentés másként" />
+                <MenuItem x:Name="menuItemKilepes" Header="Kilépés" Click="menuItemKilepes_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="Szerkesztés">
+                <MenuItem x:Name="menuItemKivagas" Header="Kivágás" />
+                <MenuItem x:Name="menuItemMasolas" Header="Másolás" />
+                <MenuItem x:Name="menuItemBeillesztes" Header="Beillesztes" />
+            </MenuItem>
+            <MenuItem Header="Adatkezelés">
+                <MenuItem x:Name="menuItemSzuresGyarto" Header="Szűrés gyártó szerint" Click="menuItemSzuresGyarto_Click"/>                
+            </MenuItem>
+            <MenuItem Header="Súgó">
+                <MenuItem x:Name="menuItemNevjegy" Header="Névjegy" Click="menuItemNevjegy_Click"/>                
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

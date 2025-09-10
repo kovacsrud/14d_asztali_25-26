@@ -15,6 +15,10 @@
         <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <ComboBox x:Name="comboboxGyarto" FontSize="18" Margin="0,0,10,0" SelectionChanged="comboboxGyarto_SelectionChanged"/>
             <Button x:Name="buttonOsszesAdat" Content="Visszaállítás" FontSize="16" Click="buttonOsszesAdat_Click"/>
+            <TextBlock Text="Szűrés modell szerint:" VerticalAlignment="Center" FontSize="16" Margin="10,0,10,0"/>
+            <TextBox x:Name="textboxModell" FontSize="16" Width="200"/>
+            <Button x:Name="buttonModellKeres" Content="Keresés" FontSize="16" Margin="10,0,0,0" Click="buttonModellKeres_Click"/>
+            <Button x:Name="buttonMentes" Content="Mentés" FontSize="16" Margin="10,0,0,0" Click="buttonMentes_Click"/>
         </WrapPanel>
 
     </Grid>

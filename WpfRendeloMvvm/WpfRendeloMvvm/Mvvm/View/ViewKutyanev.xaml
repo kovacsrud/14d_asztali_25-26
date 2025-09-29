@@ -7,7 +7,19 @@
         mc:Ignorable="d"
         Title="Kutyanevek" Height="450" Width="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding Kutyanevek}" SelectedItem="{Binding SelectedKutyanev}" IsReadOnly="True" ColumnWidth="*"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Kutyanevek}" SelectedItem="{Binding SelectedKutyanev}" IsReadOnly="True" ColumnWidth="*" Grid.ColumnSpan="2" MouseDoubleClick="DataGrid_MouseDoubleClick"/>
+
+        <Button x:Name="buttonUjKutyanev" Content="Új kutyanév" Grid.Row="1" Width="200" FontSize="16" Height="30" Click="buttonUjKutyanev_Click"/>
+        <Button x:Name="buttonTorolKutyanev" Content="Kutyanév törlése" Grid.Row="1" Grid.Column="2" Width="200" FontSize="16" Height="30" Click="buttonTorolKutyanev_Click"/>
+
 
     </Grid>
 </Window>

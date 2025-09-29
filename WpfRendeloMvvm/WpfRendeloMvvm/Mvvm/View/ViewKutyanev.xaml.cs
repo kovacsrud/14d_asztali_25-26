@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfRendeloMvvm.Mvvm.ViewModel;
 
 namespace WpfRendeloMvvm.Mvvm.View
 {
@@ -22,6 +23,36 @@ namespace WpfRendeloMvvm.Mvvm.View
         public ViewKutyanev()
         {
             InitializeComponent();
+        }
+
+        private void buttonUjKutyanev_Click(object sender, RoutedEventArgs e)
+        {
+            ViewInputKutyanev inputKutyanev=new ViewInputKutyanev(DataContext as RendeloViewModel);
+            //inputKutyanev.DataContext = DataContext as RendeloViewModel;
+            inputKutyanev.ShowDialog();
+        }
+
+        private void buttonTorolKutyanev_Click(object sender, RoutedEventArgs e)
+        {
+            var vm=DataContext as RendeloViewModel;
+
+            if (vm.SelectedKutyanev!=null)
+            {
+                vm.KutyanevTorles(vm.SelectedKutyanev);
+                vm.GetKutyanevek();
+            }
+            
+        }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm = DataContext as RendeloViewModel;
+            if (vm.SelectedKutyanev != null)
+            {
+                ViewInputKutyanev inputKutyanev = new ViewInputKutyanev(true,DataContext as RendeloViewModel);
+                
+                inputKutyanev.ShowDialog();
+            }
         }
     }
 }

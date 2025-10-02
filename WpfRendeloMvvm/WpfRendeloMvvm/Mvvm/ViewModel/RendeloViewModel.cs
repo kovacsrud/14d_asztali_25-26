@@ -20,14 +20,48 @@ namespace WpfRendeloMvvm.Mvvm.ViewModel
 
         public RendeloViewModel()
         {
-            Kutyanevek=DbRepo.GetKutyanevek();    
-            Rendelesek=DbRepo.GetRendelesek();
+            GetKutyanevek();
+            GetRendelesek();
         }
 
         public void GetKutyanevek()
         {
             Kutyanevek = DbRepo.GetKutyanevek();
         }
+
+        public void GetRendelesek()
+        {
+            Rendelesek = DbRepo.GetRendelesek();
+        }
+
+        public void UjRendeles(Rendeles rendeles)
+        {
+            var valasz = MessageBox.Show("Biztosan rögzíti?","Új rendelés",MessageBoxButton.OKCancel,MessageBoxImage.Question);
+            if (valasz==MessageBoxResult.OK)
+            {
+                DbRepo.UjRendeles(rendeles);
+            }
+        }
+
+        public void ModositRendeles(Rendeles rendeles)
+        {
+            var valasz = MessageBox.Show("Biztosan módosítja?", "Módosítás", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz == MessageBoxResult.OK)
+            {
+                DbRepo.ModositRendeles(rendeles);
+            }
+        }
+
+        public void TorolRendeles(Rendeles rendeles)
+        {
+            var valasz = MessageBox.Show("Biztosan törli?", "Törlés", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz == MessageBoxResult.OK)
+            {
+                DbRepo.TorolRendeles(rendeles);
+            }
+        }
+
+  
 
         public void UjKutyanev(Kutyanev kutyanev)
         {

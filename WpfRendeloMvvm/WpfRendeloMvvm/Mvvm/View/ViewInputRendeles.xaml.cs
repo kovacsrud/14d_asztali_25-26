@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace WpfRendeloMvvm.Mvvm.View
 {
     /// <summary>
-    /// Interaction logic for ViewRendeles.xaml
+    /// Interaction logic for ViewInputRendeles.xaml
     /// </summary>
-    public partial class ViewRendeles : Window
+    public partial class ViewInputRendeles : Window
     {
-        public ViewRendeles()
+        public ViewInputRendeles()
         {
             InitializeComponent();
-        }
-
-        private void buttonUjRendeles_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void buttonTorolRendeles_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

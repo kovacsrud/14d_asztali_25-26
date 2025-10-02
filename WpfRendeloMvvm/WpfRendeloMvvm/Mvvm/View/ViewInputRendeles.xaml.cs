@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfRendeloMvvm.Mvvm.ViewModel;
 
 namespace WpfRendeloMvvm.Mvvm.View
 {
@@ -19,9 +20,39 @@ namespace WpfRendeloMvvm.Mvvm.View
     /// </summary>
     public partial class ViewInputRendeles : Window
     {
-        public ViewInputRendeles()
+        bool modosit=false;
+        RendeloViewModel vm;
+        public ViewInputRendeles(RendeloViewModel vm)
         {
             InitializeComponent();
+            this.vm = vm;
+            DataContext = vm;
+            
+        }
+        public ViewInputRendeles(bool modosit,RendeloViewModel vm)
+        {
+            InitializeComponent();
+            this.vm = vm;
+            DataContext= vm;
+            textblockCim.Text = "Rendelés módosítása";
+            Title = textblockCim.Text;
+        }
+
+        private void buttonRogzit_Click(object sender, RoutedEventArgs e)
+        {
+            if (textboxEletkor.Text.Length>0 && textboxUtolsoEll.Text.Length==10) {
+                if (modosit)
+                {
+
+                } else
+                {
+
+                }
+
+            } else
+            {
+                MessageBox.Show("Helyes adatokat adjon meg!");
+            }
         }
     }
 }

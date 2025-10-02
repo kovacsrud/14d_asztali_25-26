@@ -284,5 +284,47 @@ namespace WpfRendeloMvvm
             }
         }
 
+        public static List<Kutyafajta> GetKutyafajtak()
+        {
+            List<Kutyafajta> kutyafajtak = new List<Kutyafajta>();
+
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string sqlCommand = "select * from kutyafajtak";
+                    using (SQLiteCommand command = new SQLiteCommand(sqlCommand, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Kutyafajta kutyafajta = new Kutyafajta
+                                {
+                                    Id = Convert.ToInt32(reader["Id"]),
+                                    Nev = reader["nev"].ToString(),
+                                    EredetiNev = reader["eredetinev"].ToString()
+                                };
+
+                                kutyafajtak.Add(kutyafajta);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show("Adatbázis hiba:" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return kutyafajtak;
+        }
+
     }
 }

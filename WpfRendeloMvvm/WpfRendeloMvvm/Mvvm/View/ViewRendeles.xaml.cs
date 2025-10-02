@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfRendeloMvvm.Mvvm.ViewModel;
 
 namespace WpfRendeloMvvm.Mvvm.View
 {
@@ -26,7 +27,9 @@ namespace WpfRendeloMvvm.Mvvm.View
 
         private void buttonUjRendeles_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as RendeloViewModel;
+            ViewInputRendeles rendeles = new ViewInputRendeles(vm);
+            rendeles.ShowDialog();
         }
 
         private void buttonTorolRendeles_Click(object sender, RoutedEventArgs e)

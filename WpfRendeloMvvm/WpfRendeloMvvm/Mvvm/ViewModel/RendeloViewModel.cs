@@ -14,19 +14,28 @@ namespace WpfRendeloMvvm.Mvvm.ViewModel
     {
         public List<Kutyanev> Kutyanevek { get; set; }=new List<Kutyanev>();
         public Kutyanev SelectedKutyanev { get; set; } = new Kutyanev();
+        public List<Kutyafajta> Kutyafajtak { get; set; } = new List<Kutyafajta>();
+        public Kutyafajta SelectedKutyafajta { get; set; } = new Kutyafajta();
 
         public List<Rendeles> Rendelesek { get; set; } = new List<Rendeles>();
-        public Rendeles SelectedRendeles { get; set; }=new Rendeles();
+        public Rendeles SelectedRendeles { get; set; } = new Rendeles();
+        
 
         public RendeloViewModel()
         {
             GetKutyanevek();
             GetRendelesek();
+            GetKutyafajtak();
         }
 
         public void GetKutyanevek()
         {
             Kutyanevek = DbRepo.GetKutyanevek();
+        }
+
+        public void GetKutyafajtak()
+        {
+            Kutyafajtak=DbRepo.GetKutyafajtak();
         }
 
         public void GetRendelesek()

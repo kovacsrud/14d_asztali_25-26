@@ -15,7 +15,7 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Rendelesek}" IsReadOnly="True" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedRendeles}"  Grid.ColumnSpan="2">
+        <DataGrid ItemsSource="{Binding Rendelesek}" IsReadOnly="True" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedRendeles}"  Grid.ColumnSpan="2" MouseDoubleClick="DataGrid_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Kutya neve" Binding="{Binding Nev}"/>
                 <DataGridTextColumn Header="Kutya fajtája" Binding="{Binding Fajta}" />

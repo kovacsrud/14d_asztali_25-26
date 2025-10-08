@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfRendeloMvvm.Mvvm.Model;
 using WpfRendeloMvvm.Mvvm.ViewModel;
 
 namespace WpfRendeloMvvm.Mvvm.View
@@ -28,14 +29,21 @@ namespace WpfRendeloMvvm.Mvvm.View
             this.vm = vm;
             DataContext = vm;
             
+            vm.SelectedRendeles.Eletkor = 0;
+            vm.SelectedRendeles.UtolsoEll = "";
+            comboKutyanev.SelectedIndex = 0;
+            comboKutyafajta.SelectedIndex = 0;
         }
         public ViewInputRendeles(bool modosit,RendeloViewModel vm)
         {
             InitializeComponent();
+            this.modosit = modosit;
             this.vm = vm;
             DataContext= vm;
             textblockCim.Text = "Rendelés módosítása";
             Title = textblockCim.Text;
+            comboKutyafajta.SelectedValue = vm.SelectedRendeles.FajtaId;
+            comboKutyanev.SelectedValue = vm.SelectedRendeles.NevId;
         }
 
         private void buttonRogzit_Click(object sender, RoutedEventArgs e)
@@ -43,10 +51,30 @@ namespace WpfRendeloMvvm.Mvvm.View
             if (textboxEletkor.Text.Length>0 && textboxUtolsoEll.Text.Length==10) {
                 if (modosit)
                 {
-
+                    vm.ModositRendeles(vm.SelectedRendeles);
+                    vm.GetRendelesek();
                 } else
                 {
+                    try
+                    {
+                        
+                        Rendeles rendeles = new Rendeles
+                        {
+                            FajtaId = (int)comboKutyafajta.SelectedValue,
+                            NevId = (int)comboKutyanev.SelectedValue,
+                            Eletkor = Convert.ToInt32(textboxEletkor.Text),
+                            UtolsoEll = textboxUtolsoEll.Text
 
+                        };
+                        vm.UjRendeles(rendeles);
+                        vm.GetRendelesek();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Az életkornak számnak kell lennie!");                        
+                    }
+
+                   
                 }
 
             } else

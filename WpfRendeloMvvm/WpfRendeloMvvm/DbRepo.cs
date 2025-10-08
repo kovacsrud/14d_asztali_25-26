@@ -228,7 +228,7 @@ namespace WpfRendeloMvvm
                 using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
                 {
                     connection.Open();
-                    string updateCommand = "update kutya set fajtaid=@fajtaid nevid=@nevid eletkor=@eletkor utolsoell=@utolsoell where Id=@id";
+                    string updateCommand = "update kutya set fajtaid=@fajtaid,nevid=@nevid,eletkor=@eletkor, utolsoell=@utolsoell where Id=@id";
                     using (SQLiteCommand command = new SQLiteCommand(updateCommand, connection))
                     {
                         command.Parameters.AddWithValue("@id", rendeles.Id);

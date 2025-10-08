@@ -18,7 +18,7 @@ namespace WpfRendeloMvvm.Mvvm.ViewModel
         public Kutyafajta SelectedKutyafajta { get; set; } = new Kutyafajta();
 
         public List<Rendeles> Rendelesek { get; set; } = new List<Rendeles>();
-        public Rendeles SelectedRendeles { get; set; } = new Rendeles();
+        public Rendeles SelectedRendeles { get; set; } =new Rendeles();
         
 
         public RendeloViewModel()

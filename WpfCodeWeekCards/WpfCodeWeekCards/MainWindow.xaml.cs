@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfCodeWeekCards.Mvvm.ViewModel;
 
 namespace WpfCodeWeekCards
 {
@@ -19,6 +20,42 @@ namespace WpfCodeWeekCards
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new KartyaViewModel();
+        }
+
+        private void buttonValaszt_Click(object sender, RoutedEventArgs e)
+        {
+            var vm=DataContext as KartyaViewModel;
+            vm.SelectedKartya = vm.GetRandomKartya();
+        }
+
+        private void buttonPiros_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.SelectedKartya = vm.GetRandomKartya();
+
+            if(vm.SelectedKartya.FeketeVagyPiros==2)
+            {
+                vm.Kassza += vm.Tet;
+            } else
+            {
+                vm.Kassza -= vm.Tet;
+            }
+        }
+
+        private void buttonFekete_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.SelectedKartya = vm.GetRandomKartya();
+
+            if (vm.SelectedKartya.FeketeVagyPiros == 1)
+            {
+                vm.Kassza += vm.Tet;
+            }
+            else
+            {
+                vm.Kassza -= vm.Tet;
+            }
         }
     }
 }

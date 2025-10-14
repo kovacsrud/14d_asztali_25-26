@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="KartyaBack.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>KartyaBack.resx</DependentUpon>
+    </Compile>
     <Compile Update="Kartyak.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -26,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="KartyaBack.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KartyaBack.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Kartyak.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Kartyak.Designer.cs</LastGenOutput>

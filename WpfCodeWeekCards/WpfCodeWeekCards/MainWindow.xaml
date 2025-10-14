@@ -10,7 +10,7 @@
         AllowsTransparency="True"
         Title="CodeWeekCards" Height="450" Width="800">
     <Window.Background>
-        <SolidColorBrush Color="White" Opacity="0"/>
+        <SolidColorBrush Color="{StaticResource sotetbarnaColor}" Opacity="0.1"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
@@ -37,19 +37,32 @@
             </Rectangle.Fill>
             
         </Rectangle>
+
+        <Rectangle Grid.Column="2" Fill="{StaticResource arany}" Grid.Row="5" Grid.RowSpan="2" RadiusX="10" RadiusY="10">
+            
+        </Rectangle>
+
+        <Rectangle Grid.Column="2" Fill="{StaticResource arany}" Grid.Row="2"  RadiusX="10" RadiusY="10">
+
+        </Rectangle>
+
+
         <WrapPanel Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
-            <fa:FontAwesome x:Name="minGomb" Icon="WindowMinimize" FontSize="40" Margin="0,5,5,0" MouseDown="minGomb_MouseDown"/>
-            <fa:FontAwesome x:Name="maxGomb" Icon="WindowMaximize" FontSize="40" Margin="0,5,5,0" MouseDown="maxGomb_MouseDown"/>
-            <fa:FontAwesome x:Name="closeGomb" Icon="WindowClose" FontSize="40" Margin="0,5,5,0" MouseDown="closeGomb_MouseDown"/>
+            <fa:FontAwesome x:Name="minGomb" Foreground="{StaticResource barnasvoros}" Icon="WindowMinimize" FontSize="40" Margin="0,5,5,0" MouseDown="minGomb_MouseDown"/>
+            <fa:FontAwesome x:Name="maxGomb" Foreground="{StaticResource barnasvoros}" Icon="WindowMaximize" FontSize="40" Margin="0,5,5,0" MouseDown="maxGomb_MouseDown"/>
+            <fa:FontAwesome x:Name="closeGomb" Foreground="{StaticResource barnasvoros}" Icon="WindowClose" FontSize="40" Margin="0,5,5,0" MouseDown="closeGomb_MouseDown"/>
         </WrapPanel>
         
         
-        <Image x:Name="randomKartya" Source="{Binding SelectedKartya.KartyaKep}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6" Margin="5"/>
-        <Button x:Name="buttonValaszt" Content="Választás" Grid.Column="1" Grid.Row="7" Width="200" Height="30" Click="buttonValaszt_Click" IsEnabled="False"/>
-        <Button x:Name="buttonPiros" Content="Piros" Click="buttonPiros_Click" Grid.Column="2" Grid.Row="5" Width="200" Height="30"/>
-        <Button x:Name="buttonFekete" Content="Fekete" Click="buttonFekete_Click" Grid.Column="2" Grid.Row="6" Width="200" Height="30"/>
+        <Image x:Name="randomKartya" Source="{Binding SelectedKartya.KartyaKep}" Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Margin="5"/>
+        <Image x:Name="kartyaBack" Source="{Binding SelectedHatter}" Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Margin="5"/>
 
-        <TextBlock Text="{Binding Kassza}" x:Name="textblockKassza" FontSize="20" Grid.Column="2" Grid.Row="1"  TextAlignment="Center"/>
+
+
+        <Button Style="{DynamicResource GombStilus1}" x:Name="buttonPiros" Content="Piros" Click="buttonPiros_Click" Grid.Column="2" Grid.Row="5" Width="200" Height="30"/>
+        <Button Style="{DynamicResource GombStilus1}" x:Name="buttonFekete" Content="Fekete" Click="buttonFekete_Click" Grid.Column="2" Grid.Row="6" Width="200" Height="30" />
+
+        <TextBlock Text="{Binding Kassza}" Foreground="{StaticResource sotetbarna}" x:Name="textblockKassza" FontSize="30" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" TextAlignment="Center"/>
 
     </Grid>
 </Window>

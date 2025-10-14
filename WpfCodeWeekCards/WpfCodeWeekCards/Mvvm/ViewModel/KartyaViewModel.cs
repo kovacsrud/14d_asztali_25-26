@@ -6,6 +6,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using PropertyChanged;
 using WpfCodeWeekCards.Mvvm.Model;
 
@@ -15,11 +16,14 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
     public class KartyaViewModel
     {
         public List<Kartya> Pakli { get; set; }= new List<Kartya>();
+        public List<BitmapImage> Hatterek { get; set; } = new List<BitmapImage>();
         public Kartya SelectedKartya { get; set; } = new Kartya();
+        public BitmapImage SelectedHatter { get; set; } = new BitmapImage();
         public int Kassza { get; set; } = 1000;
         public int Tet { get; set; } = 10;
 
         ResourceManager rm = new ResourceManager("WpfCodeWeekCards.Kartyak",Assembly.GetExecutingAssembly());
+        ResourceManager cardBackManager = new ResourceManager("WpfCodeWeekCards.KartyaBack",Assembly.GetExecutingAssembly());
 
         public KartyaViewModel()
         {
@@ -32,6 +36,16 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
 
                 Pakli.Add(new Kartya(kartyanev,kartyakepBin));
             }
+
+            ResourceSet cardBackRs = cardBackManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
+
+            foreach (System.Collections.DictionaryEntry kartya in cardBackRs)
+            {
+                var kartyakepBin = (byte[])kartya.Value;
+                Hatterek.Add(CardUtil.GetKartyaImage(kartyakepBin));
+            }
+
+            SelectedHatter = Hatterek[1];
 
         }
 
@@ -47,7 +61,9 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
                 Pakli.RemoveAt(veletlenSzam);
             } else
             {
+                SelectedHatter = new BitmapImage();
                 MessageBox.Show("Elfogytak a kártyák!");
+                
             }
 
 

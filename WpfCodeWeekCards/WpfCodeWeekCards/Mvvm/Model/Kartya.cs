@@ -32,7 +32,7 @@ namespace WpfCodeWeekCards.Mvvm.Model
             Figura = Convert.ToInt32(kartyaAdatok[1]);
             Szamertek = Convert.ToInt32(kartyaAdatok[2]);
             FeketeVagyPiros = Convert.ToInt32(kartyaAdatok[3]);
-            KartyaKep = GetKartyaImage(kepadat);
+            KartyaKep = CardUtil.GetKartyaImage(kepadat);
         }
 
         private BitmapImage GetKartyaImage(byte[] kepadat)

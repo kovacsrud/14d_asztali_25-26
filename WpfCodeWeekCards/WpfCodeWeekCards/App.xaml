@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:WpfCodeWeekCards"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="arany" Color="#AF9164"/>
+        <SolidColorBrush x:Key="vilagos" Color="#F7F3E3"/>
+        <SolidColorBrush x:Key="szurke" Color="#B3B6B7" />
+        <SolidColorBrush x:Key="barnasvoros" Color="#6F1A07" />
+        <SolidColorBrush x:Key="sotetbarna" Color="#2B2118" />
+
+        <Color x:Key="aranyColor">#AF9164</Color>
+        <Color x:Key="vilagosColor">#F7F3E3</Color>
+        <Color x:Key="szurkeColor">#B3B6B7</Color>
+        <Color x:Key="barnasvorosColor">#6F1A07</Color>
+        <Color x:Key="sotetbarnaColor">#2B2118</Color>
+        
+
     </Application.Resources>
 </Application>

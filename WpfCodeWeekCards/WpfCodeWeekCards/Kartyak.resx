@@ -236,6 +236,9 @@
   <data name="A_3_14_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ace_of_hearts.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="A_4_14_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ace_of_spades2.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="J_1_11_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\jack_of_clubs2.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

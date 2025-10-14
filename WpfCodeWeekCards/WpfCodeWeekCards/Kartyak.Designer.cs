@@ -453,6 +453,16 @@ namespace WpfCodeWeekCards {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] A_4_14_1 {
+            get {
+                object obj = ResourceManager.GetObject("A_4_14_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] J_1_11_1 {
             get {
                 object obj = ResourceManager.GetObject("J_1_11_1", resourceCulture);

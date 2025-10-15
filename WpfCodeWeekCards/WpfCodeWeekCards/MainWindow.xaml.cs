@@ -20,7 +20,10 @@ namespace WpfCodeWeekCards
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new KartyaViewModel();
+            var vm= new KartyaViewModel();
+            DataContext = vm;
+            vm.EventJatekVege += JatekVege;
+
         }
 
         private void buttonValaszt_Click(object sender, RoutedEventArgs e)
@@ -41,10 +44,7 @@ namespace WpfCodeWeekCards
             if (vm.SelectedKartya.FeketeVagyPiros != 2 && !vm.Jatekvege)
             {
                 vm.Kassza -= vm.Tet;
-                if (vm.Kassza <= 0)
-                {
-                    vm.Jatekvege = true;
-                }
+                
             }
         }
 
@@ -60,10 +60,7 @@ namespace WpfCodeWeekCards
             if (vm.SelectedKartya.FeketeVagyPiros != 1 && !vm.Jatekvege)
             {
                 vm.Kassza -= vm.Tet;
-                if (vm.Kassza <= 0)
-                {
-                    vm.Jatekvege = true;
-                }
+               
             }
         }
 
@@ -105,10 +102,41 @@ namespace WpfCodeWeekCards
         private void buttonMinus_Click(object sender, RoutedEventArgs e)
         {
             var vm = DataContext as KartyaViewModel;
-            if (vm.Tet < vm.Kassza && vm.Tet>100)
+            if (vm.Tet <= vm.Kassza && vm.Tet>100)
             {
                 vm.Tet -= 100;
             }
+        }
+
+        private void JatekVege(object sender, EventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.Jatekvege = true;
+            buttonFekete.IsEnabled = false;
+            buttonPiros.IsEnabled = false;
+            buttonMinus.IsEnabled = false;
+            buttonPlus.IsEnabled = false;
+            MessageBox.Show("Játék vége!");
+            buttonUjJatek.Visibility = Visibility.Visible;
+            //kartyaBack.Source = new BitmapImage();
+            kartyaBack.Visibility = Visibility.Hidden;
+            
+           
+            
+        }
+
+        private void buttonUjJatek_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.Jatekvege = false;
+            vm.InitPakli();
+            buttonFekete.IsEnabled = true;
+            buttonPiros.IsEnabled = true;
+            buttonMinus.IsEnabled = true;
+            buttonPlus.IsEnabled = true;
+            buttonUjJatek.Visibility = Visibility.Hidden;
+            kartyaBack.Visibility = Visibility.Visible;
+
         }
     }
 }

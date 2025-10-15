@@ -74,5 +74,7 @@
 
         <TextBlock Text="{Binding Kassza}" Foreground="{StaticResource sotetbarna}" x:Name="textblockKassza" FontSize="30" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" TextAlignment="Center"/>
 
+        <Button Style="{DynamicResource GombStilus1}" x:Name="buttonUjJatek" Content="Új játék" Click="buttonUjJatek_Click" Visibility="Hidden" Grid.Column="2" Grid.Row="7" Width="200"  Height="30" />
+
     </Grid>
 </Window>

@@ -34,12 +34,17 @@ namespace WpfCodeWeekCards
             var vm = DataContext as KartyaViewModel;
             vm.SelectedKartya = vm.GetRandomKartya();
 
-            if(vm.SelectedKartya.FeketeVagyPiros==2)
+            if(vm.SelectedKartya.FeketeVagyPiros==2 && !vm.Jatekvege)
             {
                 vm.Kassza += vm.Tet;
-            } else
+            }
+            if (vm.SelectedKartya.FeketeVagyPiros != 2 && !vm.Jatekvege)
             {
                 vm.Kassza -= vm.Tet;
+                if (vm.Kassza <= 0)
+                {
+                    vm.Jatekvege = true;
+                }
             }
         }
 
@@ -48,13 +53,17 @@ namespace WpfCodeWeekCards
             var vm = DataContext as KartyaViewModel;
             vm.SelectedKartya = vm.GetRandomKartya();
 
-            if (vm.SelectedKartya.FeketeVagyPiros == 1)
+            if (vm.SelectedKartya.FeketeVagyPiros == 1 && !vm.Jatekvege)
             {
                 vm.Kassza += vm.Tet;
             }
-            else
+            if (vm.SelectedKartya.FeketeVagyPiros != 1 && !vm.Jatekvege)
             {
                 vm.Kassza -= vm.Tet;
+                if (vm.Kassza <= 0)
+                {
+                    vm.Jatekvege = true;
+                }
             }
         }
 
@@ -82,6 +91,24 @@ namespace WpfCodeWeekCards
         private void closeGomb_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Close();
+        }
+
+        private void buttonPlus_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            if (vm.Tet < vm.Kassza)
+            {
+                vm.Tet += 100;
+            }
+        }
+
+        private void buttonMinus_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            if (vm.Tet < vm.Kassza && vm.Tet>100)
+            {
+                vm.Tet -= 100;
+            }
         }
     }
 }

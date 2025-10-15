@@ -20,7 +20,8 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
         public Kartya SelectedKartya { get; set; } = new Kartya();
         public BitmapImage SelectedHatter { get; set; } = new BitmapImage();
         public int Kassza { get; set; } = 1000;
-        public int Tet { get; set; } = 10;
+        public int Tet { get; set; } = 100;
+        public bool Jatekvege { get; set; } = false;
 
         ResourceManager rm = new ResourceManager("WpfCodeWeekCards.Kartyak",Assembly.GetExecutingAssembly());
         ResourceManager cardBackManager = new ResourceManager("WpfCodeWeekCards.KartyaBack",Assembly.GetExecutingAssembly());
@@ -61,8 +62,9 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
                 Pakli.RemoveAt(veletlenSzam);
             } else
             {
+                Jatekvege = true;
                 SelectedHatter = new BitmapImage();
-                MessageBox.Show("Elfogytak a kártyák!");
+                MessageBox.Show($"Elfogytak a kártyák! Pontszámod:{Kassza}");
                 
             }
 

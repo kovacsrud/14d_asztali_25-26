@@ -39,12 +39,24 @@ namespace WpfCodeWeekCards
 
             if(vm.SelectedKartya.FeketeVagyPiros==2 && !vm.Jatekvege)
             {
+                
                 vm.Kassza += vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+
+                }
             }
             if (vm.SelectedKartya.FeketeVagyPiros != 2 && !vm.Jatekvege)
             {
-                vm.Kassza -= vm.Tet;
                 
+                vm.Kassza -= vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+
+                }
+
             }
         }
 
@@ -55,12 +67,24 @@ namespace WpfCodeWeekCards
 
             if (vm.SelectedKartya.FeketeVagyPiros == 1 && !vm.Jatekvege)
             {
+                
                 vm.Kassza += vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+
+                }
             }
             if (vm.SelectedKartya.FeketeVagyPiros != 1 && !vm.Jatekvege)
             {
-                vm.Kassza -= vm.Tet;
                
+                vm.Kassza -= vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+
+                }
+
             }
         }
 
@@ -116,10 +140,13 @@ namespace WpfCodeWeekCards
             buttonPiros.IsEnabled = false;
             buttonMinus.IsEnabled = false;
             buttonPlus.IsEnabled = false;
+            kartyaBack.Visibility = Visibility.Hidden;
+            vm.Kassza = 0;
+
             MessageBox.Show("Játék vége!");
             buttonUjJatek.Visibility = Visibility.Visible;
             //kartyaBack.Source = new BitmapImage();
-            kartyaBack.Visibility = Visibility.Hidden;
+            
             
            
             

@@ -69,7 +69,9 @@ namespace WpfCodeWeekCards.Mvvm.ViewModel
             }
 
             Kassza = 1000;
+            Tet = 100;
             SelectedHatter = Hatterek[1];
+            SelectedKartya = new Kartya();
         }
 
         public Kartya GetRandomKartya()

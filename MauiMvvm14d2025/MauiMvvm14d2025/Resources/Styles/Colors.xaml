@@ -38,8 +38,8 @@
     <SolidColorBrush x:Key="sotet1Brush" Color="{StaticResource sotet1}" />
     <SolidColorBrush x:Key="sotet2Brush" Color="{StaticResource sotet2}" />
     <SolidColorBrush x:Key="sotet3Brush" Color="{StaticResource sotet3}" />
-    <SolidColorBrush x:Key="sotet4Brush" Color="{StaticResource sotet4}" />
-    <SolidColorBrush x:Key="sotet5Brush" Color="{StaticResource sotet5}" />
+    <SolidColorBrush x:Key="vilagos1Brush" Color="{StaticResource vilagos1}" />
+    <SolidColorBrush x:Key="vilagos2Brush" Color="{StaticResource vilagos2}" />
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>

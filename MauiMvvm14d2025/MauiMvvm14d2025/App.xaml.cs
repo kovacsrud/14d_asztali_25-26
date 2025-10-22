@@ -1,4 +1,6 @@
-﻿namespace MauiMvvm14d2025
+﻿using MauiMvvm14d2025.Mvvm.View;
+
+namespace MauiMvvm14d2025
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new StartPage());
         }
     }
 }

@@ -6,4 +6,9 @@ public partial class StartPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void buttonTovabb_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

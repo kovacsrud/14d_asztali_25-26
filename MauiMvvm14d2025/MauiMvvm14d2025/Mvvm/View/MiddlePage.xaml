@@ -2,11 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiMvvm14d2025.Mvvm.View.MiddlePage"
-             Title="MiddlePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+             Title="MiddlePage" BackgroundColor="{StaticResource vilagos1}" NavigationPage.HasNavigationBar="False">
+
+    <Border VerticalOptions="Fill" Margin="10" Stroke="{StaticResource sotet3Brush}" BackgroundColor="{StaticResource sotet1}" StrokeShape="RoundRectangle 20,20,20,20">
+        <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*">
+            <Label 
+            Text="{Binding Nev.Vezeteknev}"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            HorizontalOptions="Center" 
+                TextColor="{StaticResource vilagos2}" FontSize="Medium" Grid.Row="2" Grid.ColumnSpan="2"/>
+            <Label 
+                Text="{Binding Nev.Keresztnev}"
+                VerticalOptions="Center" HorizontalOptions="Center" TextColor="{StaticResource vilagos2}" FontSize="Medium" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <Button x:Name="buttonTovabb" Grid.Row="4" Grid.ColumnSpan="2" Margin="20" Text="Tovább" Clicked="buttonTovabb_Clicked" />
+            <Button x:Name="buttonVissza" Grid.Row="5" Grid.ColumnSpan="2" Margin="20" Text="Vissza" Clicked="buttonVissza_Clicked" />
+        </Grid>
+    </Border>
+
 </ContentPage>

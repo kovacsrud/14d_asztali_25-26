@@ -13,6 +13,8 @@ namespace MauiCollection14d2025
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Mistral.ttf","Mistral");
+                    fonts.AddFont("RadiantSouthernCross.ttf","Radiant");
                 });
 
 #if DEBUG

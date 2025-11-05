@@ -10,6 +10,14 @@ namespace MauiCollection14d2025
         public MainPage()
         {
             InitializeComponent();
+            
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await LoadMauiAsset();
+            BindingContext = Hegyek;
         }
 
 

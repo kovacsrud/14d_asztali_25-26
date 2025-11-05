@@ -9,11 +9,23 @@
             Spacing="25">
            
             <Label
-                Text="Hello, World!"
+                Text="Lista nézet"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                SemanticProperties.HeadingLevel="Level1" FontFamily="Mistral" HorizontalOptions="Center" />
 
-            
+            <CollectionView ItemsSource="{Binding .}" SelectionMode="Single" HorizontalOptions="Center" EmptyView="A lista üres!" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding HegyCsucsNeve}" />
+                            <Label Text="{Binding Hegyseg}" />
+                            <Label Text="{Binding Magassag}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
         </VerticalStackLayout>
     </ScrollView>
 

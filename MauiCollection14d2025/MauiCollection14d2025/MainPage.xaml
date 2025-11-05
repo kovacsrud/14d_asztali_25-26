@@ -18,8 +18,8 @@
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,*,*">
                             <Label Text="{Binding HegyCsucsNeve}" />
-                            <Label Text="{Binding Hegyseg}" />
-                            <Label Text="{Binding Magassag}" />
+                            <Label Text="{Binding Hegyseg}" Grid.Column="1"/>
+                            <Label Text="{Binding Magassag}" Grid.Column="2"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

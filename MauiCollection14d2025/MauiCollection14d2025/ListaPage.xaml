@@ -17,13 +17,16 @@
                                     <VisualState Name="Normal"></VisualState>
                                     <VisualState Name="Selected">
                                         <VisualState.Setters>
-                                            <Setter Property="BackgroundColor" Value="Black"/>
+                                            <Setter Property="Stroke" Value="Black"/>
                                             
-                                            
+
+
                                         </VisualState.Setters>
                                     </VisualState>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
+
+
 
 
 
@@ -35,7 +38,9 @@
                                 <Label Margin="5" HorizontalOptions="Center" Text="{Binding Hegyseg}" Grid.Column="1"/>
                                 <Label Margin="5" HorizontalOptions="Center" Text="{Binding Magassag}" Grid.Column="2" />
 
-                               
+                              
+
+
                             </Grid>
                         </Border>
                     </DataTemplate>

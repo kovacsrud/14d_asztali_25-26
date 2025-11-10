@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandom14d2025.Mvvm.View.DetailPage"
-             Title="DetailPage">
+             Title="DetailPage" BackgroundColor="{StaticResource RuHatter}" NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
         <Border VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" BackgroundColor="{StaticResource RuHatter}" StrokeShape="RoundRectangle 0,40,40,0">
@@ -11,17 +11,17 @@
                     <Image Source="{Binding picture.large}" WidthRequest="200" HeightRequest="200"/>
                 </Border>
                 <HorizontalStackLayout Grid.Row="1">
-                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,2,0"/>
-                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,2,0"/>
-                    <Label Text="{Binding name.last}" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="0,0,2,0"/>
+                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="5,0,4,0"/>
+                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,4,0"/>
+                    <Label Text="{Binding name.last}" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="0,0,4,0"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Grid.Row="2">
-                    <Label Text="Email:" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="0,0,2,0"/>
-                    <Label Text="{Binding email}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,2,0"/>
+                    <Label Text="Email:" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="5,0,4,0"/>
+                    <Label Text="{Binding email}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,4,0"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Grid.Row="3">
-                    <Label Text="Phone:" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="0,0,2,0"/>
-                    <Label Text="{Binding phone}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,2,0"/>
+                    <Label Text="Phone:" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="5,0,4,0"/>
+                    <Label Text="{Binding phone}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,4,0"/>
                 </HorizontalStackLayout>
 
             </Grid>

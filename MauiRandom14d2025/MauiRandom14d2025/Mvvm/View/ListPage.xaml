@@ -27,9 +27,9 @@
                                     <Image WidthRequest="80" HeightRequest="80" Source="{Binding picture.large}"/>
                                 </Border>
                                 <HorizontalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
-                                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="NexaHeavy" TextColor="White"/>
-                                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="NexaHeavy" TextColor="White"/>
-                                    <Label Text="{Binding name.last}" TextColor="White" FontSize="18" FontFamily="NexaHeavy"/>
+                                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="5,0,4,0"/>
+                                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="NexaHeavy" TextColor="White" Margin="0,0,4,0"/>
+                                    <Label Text="{Binding name.last}" TextColor="White" FontSize="18" FontFamily="NexaHeavy" Margin="0,0,4,0"/>
                                 </HorizontalStackLayout>
                             </Grid>
                         </Border>

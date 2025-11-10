@@ -2,11 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandom14d2025.Mvvm.View.StartPage"
-             Title="StartPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="StartPage" NavigationPage.HasNavigationBar="False" BackgroundColor="{StaticResource RuHatter}">
+
+    <Border Margin="10" VerticalOptions="Fill" Stroke="{StaticResource RuStroke}" StrokeShape="RoundRectangle 0,40,40,0">
+        <Grid RowDefinitions=".3*,.6*,.1*">
+            <Label Text="RandomUser" TextColor="White" FontSize="24" FontFamily="NexaLight" HorizontalOptions="Center" VerticalOptions="End" />
+            <Label Text=".ME" TextColor="White" Grid.Row="1" FontSize="76" FontFamily="NexaHeavy" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button x:Name="buttonStart" Text="Tovább" TextColor="White" Grid.Row="2" BackgroundColor="{StaticResource RuButtonBg}" Clicked="buttonStart_Clicked"/>
+
+
+        </Grid>
+    </Border>
+    
+    
 </ContentPage>

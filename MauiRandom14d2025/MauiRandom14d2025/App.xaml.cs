@@ -1,4 +1,6 @@
-﻿namespace MauiRandom14d2025
+﻿using MauiRandom14d2025.Mvvm.View;
+
+namespace MauiRandom14d2025
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new StartPage());
         }
     }
 }

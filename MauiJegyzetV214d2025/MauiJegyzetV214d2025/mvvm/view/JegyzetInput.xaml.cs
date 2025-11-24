@@ -30,6 +30,7 @@ public partial class JegyzetInput : ContentPage
             if (result)
             {
                 App.JegyzetRepo.UpdateItem(vm.AktualisJegyzet);
+                await DisplayAlert("Módosítás",App.JegyzetRepo.StatusMsg,"Ok");
                 vm.GetJegyzetek();
             }
 
@@ -37,6 +38,7 @@ public partial class JegyzetInput : ContentPage
         {
             //új jegyzet
             App.JegyzetRepo.NewItem(new model.Jegyzet { Cim=entryCim.Text,Szoveg=entrySzoveg.Text});
+            await DisplayAlert("Új jegyzet", App.JegyzetRepo.StatusMsg, "Ok");
             vm.GetJegyzetek();
 
         }

@@ -11,6 +11,7 @@
             HorizontalOptions="Center" />
         <Entry x:Name="entryCim" Text="{Binding AktualisJegyzet.Cim}" />
         <Entry x:Name="entrySzoveg" Text="{Binding AktualisJegyzet.Szoveg}" />
+        <DatePicker Date="{Binding AktualisJegyzet.Datum}" />
         <Button x:Name="buttonInput" Text="Rögzítés" Clicked="buttonInput_Clicked" />
 
     </VerticalStackLayout>

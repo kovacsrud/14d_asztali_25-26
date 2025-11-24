@@ -30,6 +30,7 @@ namespace MauiJegyzetV214d2025.mvvm.viewmodel
                 if (result)
                 {
                     App.JegyzetRepo.DeleteItem(AktualisJegyzet);
+                    await Application.Current.MainPage.DisplayAlert("Törlés", App.JegyzetRepo.StatusMsg, "Ok");
                     GetJegyzetek();
                 }
             });

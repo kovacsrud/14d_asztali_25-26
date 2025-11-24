@@ -65,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="mvvm\view\JegyzetInput.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="mvvm\view\JegyzetView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

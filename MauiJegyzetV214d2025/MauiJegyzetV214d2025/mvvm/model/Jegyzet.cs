@@ -16,6 +16,6 @@ namespace MauiJegyzetV214d2025.mvvm.model
         [NotNull]
         public string Szoveg { get; set; }
         [NotNull]
-        public DateTime Datum { get; set; }
+        public DateTime Datum { get; set; }= DateTime.Now;
     }
 }

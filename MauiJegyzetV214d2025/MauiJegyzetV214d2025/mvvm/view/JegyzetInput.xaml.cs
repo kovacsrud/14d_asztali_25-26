@@ -10,10 +10,11 @@ public partial class JegyzetInput : ContentPage
 		InitializeComponent();
 	}
 
-    public JegyzetInput(bool modosit)
+    public JegyzetInput(bool modosit,JegyzetViewModel vm)
     {
         InitializeComponent();
         this.modosit = modosit;
+        BindingContext = vm;
     }
 
     private async void buttonInput_Clicked(object sender, EventArgs e)

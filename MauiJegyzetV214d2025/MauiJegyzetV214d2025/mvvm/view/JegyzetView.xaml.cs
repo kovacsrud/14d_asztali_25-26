@@ -18,6 +18,7 @@ public partial class JegyzetView : ContentPage
 
     private void buttonModosit_Clicked(object sender, EventArgs e)
     {
-
+        var vm = BindingContext as JegyzetViewModel;
+        Navigation.PushAsync(new JegyzetInput(true,vm));
     }
 }

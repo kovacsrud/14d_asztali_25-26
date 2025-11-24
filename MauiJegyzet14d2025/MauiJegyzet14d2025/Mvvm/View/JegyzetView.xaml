@@ -11,7 +11,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <CollectionView x:Name="collectionJegyzetek" EmptyView="Nincsenek jegyzetek">
+        <CollectionView x:Name="collectionJegyzetek" ItemsSource="{Binding Jegyzetek}" SelectedItem="{Binding AktualisJegyzet}" EmptyView="Nincsenek jegyzetek" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border BackgroundColor="LightBlue" StrokeShape="RoundRectangle 5,5,5,5" Margin="5" Padding="5">
@@ -24,8 +24,8 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Entry x:Name="entryCim" Placeholder="Jegyzet címe" />
-        <Entry x:Name="entrySzoveg" Placeholder="Jegyzet szövege" />
+        <Entry x:Name="entryCim" Placeholder="Jegyzet címe" Text="{Binding AktualisJegyzet.Cim}"/>
+        <Entry x:Name="entrySzoveg" Placeholder="Jegyzet szövege" Text="{Binding AktualisJegyzet.Szoveg}"/>
 
         <Button x:Name="buttonUj" Text="Új jegyzet" WidthRequest="200" Clicked="buttonUj_Clicked" />
         <Button x:Name="buttonModosit" Text="Jegyzet módosítása" WidthRequest="200" Clicked="buttonModosit_Clicked" />

@@ -1,7 +1,10 @@
 using MauiJegyzet14d2025.Mvvm.Model;
 using SQLite;
 using System.Runtime.CompilerServices;
+using PropertyChanged;
 namespace MauiJegyzet14d2025.Mvvm.View;
+
+[AddINotifyPropertyChangedInterface]
 
 public partial class JegyzetView : ContentPage
 {
@@ -26,16 +29,43 @@ public partial class JegyzetView : ContentPage
 
     private void buttonUj_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            var jegyzet = new Jegyzet { Cim=entryCim.Text,Szoveg=entrySzoveg.Text };
+            connection.Insert(jegyzet);
+            Jegyzetek = connection.Table<Jegyzet>().ToList();
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Hiba", ex.Message, "Ok");
+        }
     }
 
     private void buttonModosit_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            connection.Update(AktualisJegyzet);
+            Jegyzetek = connection.Table<Jegyzet>().ToList();
+            collectionJegyzetek.SelectedItem = null;
+        }
+        catch (Exception ex)
+        {
+           DisplayAlert("Hiba", ex.Message, "Ok");
+        }
     }
 
     private void buttonTorol_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            connection.Delete(AktualisJegyzet);
+            Jegyzetek = connection.Table<Jegyzet>().ToList();
+            collectionJegyzetek.SelectedItem = null;
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Hiba", ex.Message, "Ok");
+        }
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiJegyzetV214d2025.mvvm.view.JegyzetInput"
+             Title="JegyzetInput">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="labelCim"
+            Text="Új jegyzet"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="entryCim" Text="{Binding AktualisJegyzet.Cim}" />
+        <Entry x:Name="entrySzoveg" Text="{Binding AktualisJegyzet.Szoveg}" />
+        <Button x:Name="buttonInput" Text="Rögzítés" Clicked="buttonInput_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

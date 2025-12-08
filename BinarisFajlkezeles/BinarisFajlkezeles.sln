@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarisFajlkezeles", "Binar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmuveletek", "Bitmuveletek\Bitmuveletek.csproj", "{97E42996-2D13-4AB3-A385-A90AC58614CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxPont", "MaxPont\MaxPont.csproj", "{B3D211C1-00A4-4C2E-A736-0027ABF26533}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{97E42996-2D13-4AB3-A385-A90AC58614CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97E42996-2D13-4AB3-A385-A90AC58614CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97E42996-2D13-4AB3-A385-A90AC58614CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D211C1-00A4-4C2E-A736-0027ABF26533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D211C1-00A4-4C2E-A736-0027ABF26533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D211C1-00A4-4C2E-A736-0027ABF26533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D211C1-00A4-4C2E-A736-0027ABF26533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,7 +44,7 @@ namespace Bitmuveletek
 
             //Értékek visszanyerése
             byte visszaA = (byte)((tomoritett>>12) & 0b_0000_0000_0000_1111);
-            Console.WriteLine(visszaA);
+            Console.WriteLine(visszaA);            
             byte visszaB= (byte)((tomoritett>>8) & 0b_0000_0000_0000_1111);
             Console.WriteLine(visszaB);
             byte visszaC = (byte)((tomoritett >> 4) & 0b_0000_0000_0000_1111);

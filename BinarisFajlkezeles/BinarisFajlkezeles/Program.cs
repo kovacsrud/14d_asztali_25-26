@@ -38,6 +38,11 @@ namespace BinarisFajlkezeles
                     var compression= br.ReadBytes(2);
                     Console.WriteLine($"Compression:{BitConverter.ToUInt16(compression)}");
                     var modtime= br.ReadBytes(2);
+                    var modtimeInt = BitConverter.ToUInt16(modtime);
+                    byte seconds=(byte)((modtimeInt) & 0b_0000_0000_0000_1111);
+                    Console.WriteLine($"Seconds:{seconds}");
+                    byte minutes = (byte)((modtimeInt>>4) & 0b_0000_0000_0000_1111);
+                    Console.WriteLine($"Minutes:{minutes}");
                     Console.WriteLine($"Mod time:{BitConverter.ToUInt16(modtime)}");
                     var moddate= br.ReadBytes(2);
                     Console.WriteLine($"Mod date:{BitConverter.ToUInt16(moddate)}");

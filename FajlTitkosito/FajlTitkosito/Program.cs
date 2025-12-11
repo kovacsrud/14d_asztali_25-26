@@ -48,6 +48,22 @@ namespace FajlTitkosito
 
             var kodoltAdatok = new byte[aes.IV.Length+fajlnevHossz+fajlnevBin.Length+tartalomHash.Length+tartalomHossz+titkositott.Length];
 
+            using (MemoryStream ms=new MemoryStream(kodoltAdatok))
+            {
+                using (BinaryWriter writer=new BinaryWriter(ms))
+                {
+                    writer.Write(aes.IV);
+                    writer.Write(fajlnevHossz);
+                    writer.Write(fajlnevBin);
+                    writer.Write(tartalomHash);
+                    writer.Write(tartalomHossz);
+                    writer.Write(titkositott);
+                }
+                File.WriteAllBytes("titkositott.bin",kodoltAdatok);
+                Console.WriteLine("Fájl kiírva");
+            }
+
+
 
         }
     }

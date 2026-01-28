@@ -20,5 +20,20 @@ namespace WpfKutyakEF
         {
             InitializeComponent();
         }
+
+        private void menuitemRendeles_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuitemKutyanevek_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuitemKutyafajtak_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

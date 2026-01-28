@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfKutyakEF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Állatorvosi rendelő" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Megnyitás"/>
+                <MenuItem Header="Mentés"/>
+                <MenuItem Header="Mentés másként"/>
+                <MenuItem Header="Kilépés"/>
+            </MenuItem>
+            <MenuItem Header="Szerkesztés">
+                <MenuItem Header="Kivágás"/>
+                <MenuItem Header="Másolás"/>
+                <MenuItem Header="Beillesztés"/>
+            </MenuItem>
+            <MenuItem Header="Kutyák adatai">
+                <MenuItem x:Name="menuitemRendeles" Header="Rendelés" Click="menuitemRendeles_Click"/>
+                <MenuItem x:Name="menuitemKutyanevek" Header="Kutyanevek" Click="menuitemKutyanevek_Click"/>
+                <MenuItem x:Name="menuitemKutyafajtak" Header="Kutyafajták" Click="menuitemKutyafajtak_Click"/>
+            </MenuItem>
+            <MenuItem Header="Segítség">
+                <MenuItem Header="Névjegy"/>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

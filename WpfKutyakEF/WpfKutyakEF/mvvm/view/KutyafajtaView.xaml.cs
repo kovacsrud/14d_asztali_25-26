@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfKutyakEF.mvvm.viewmodel;
 
 namespace WpfKutyakEF.mvvm.view
 {
@@ -19,9 +20,16 @@ namespace WpfKutyakEF.mvvm.view
     /// </summary>
     public partial class KutyafajtaView : Window
     {
-        public KutyafajtaView()
+        public KutyafajtaView(KutyaViewModel vm)
         {
             InitializeComponent();
+            DataContext= vm;
+        }
+
+        private void buttonMentes_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KutyaViewModel;
+            vm.DbMentes();
         }
     }
 }

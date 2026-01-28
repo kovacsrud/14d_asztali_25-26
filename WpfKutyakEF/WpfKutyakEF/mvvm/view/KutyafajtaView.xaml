@@ -11,11 +11,13 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Kutyanevek}" AutoGenerateColumns="False" ColumnWidth="*">
-            <DataGridTextColumn Header="Fajta neve" Binding="{Binding Nev}" />
-            <DataGridTextColumn Header="Fajta eredeti neve" Binding="{Binding Eredetinev}" />
+        <DataGrid ItemsSource="{Binding Kutyafajtak}" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fajta neve" Binding="{Binding Nev}" />
+                <DataGridTextColumn Header="Fajta eredeti neve" Binding="{Binding Eredetinev}" />
+            </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Width="300" Height="30" Grid.Row="1" />
+        <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Width="300" Height="30" Grid.Row="1" Click="buttonMentes_Click"/>
 
     </Grid>
 </Window>

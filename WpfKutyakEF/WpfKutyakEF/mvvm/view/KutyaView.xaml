@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfKutyakEF.mvvm.view"
         mc:Ignorable="d"
-        Title="KutyaView" Height="450" Width="800">
+        Title="Rendelési adatok" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Kutyak}" IsReadOnly="True" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedKutya}" SelectionMode="Single" MouseDoubleClick="DataGrid_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kutya neve" Binding="{Binding Nev.Kutyanev}" />
+                <DataGridTextColumn Header="Kutya fajtája" Binding="{Binding Fajta.Nev}" />
+                <DataGridTextColumn Header="Kutya kora" Binding="{Binding Eletkor}" />
+                <DataGridTextColumn Header="Utolsó ellenőrzés" Binding="{Binding Utolsoell}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Width="200" Height="30" Margin="0,0,5,0" Click="buttonMentes_Click"/>
+            <Button x:Name="buttonUj" Content="Új rendelési adat" Width="200" Height="30" Margin="0,0,5,0" Click="buttonUj_Click"/>
+            <Button x:Name="buttonTorles" Content="Kiválasztott adat törlése" Width="200" Height="30" Click="buttonTorles_Click"/>
+        </WrapPanel>
+
     </Grid>
 </Window>

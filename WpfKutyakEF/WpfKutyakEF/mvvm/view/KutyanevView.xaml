@@ -16,7 +16,7 @@
                 <DataGridTextColumn Header="Kutya neve" Binding="{Binding Kutyanev}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Grid.Row="1" Width="300" Height="30" FontSize="16" />
+        <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Grid.Row="1" Width="300" Height="30" FontSize="16" Click="buttonMentes_Click"/>
 
     </Grid>
 </Window>

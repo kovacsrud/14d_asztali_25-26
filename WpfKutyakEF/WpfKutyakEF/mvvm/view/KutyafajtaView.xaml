@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfKutyakEF.mvvm.view"
         mc:Ignorable="d"
-        Title="KutyafajtaView" Height="450" Width="800">
+        Title="Kutyafajták" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Kutyanevek}" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGridTextColumn Header="Fajta neve" Binding="{Binding Nev}" />
+            <DataGridTextColumn Header="Fajta eredeti neve" Binding="{Binding Eredetinev}" />
+        </DataGrid>
+        <Button x:Name="buttonMentes" Content="Mentés az adatbázisba" Width="300" Height="30" Grid.Row="1" />
+
     </Grid>
 </Window>

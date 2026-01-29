@@ -34,7 +34,7 @@ namespace WpfKutyakEF.mvvm.view
         private void buttonUj_Click(object sender, RoutedEventArgs e)
         {
             var vm = DataContext as KutyaViewModel;
-            InputKutyaView inputkutya = new InputKutyaView { DataContext = vm };
+            InputKutyaView inputkutya = new InputKutyaView(vm);
             inputkutya.ShowDialog();
         }
 
@@ -52,7 +52,7 @@ namespace WpfKutyakEF.mvvm.view
         private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var vm = DataContext as KutyaViewModel;
-            InputKutyaView inputkutya = new InputKutyaView { DataContext = vm };
+            InputKutyaView inputkutya = new InputKutyaView(vm,true);
             inputkutya.ShowDialog();
         }
     }

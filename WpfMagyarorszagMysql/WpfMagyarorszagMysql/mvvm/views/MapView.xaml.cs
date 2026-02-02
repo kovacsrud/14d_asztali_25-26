@@ -20,10 +20,10 @@ namespace WpfMagyarorszagMysql.mvvm.views
     /// </summary>
     public partial class MapView : Window
     {
-        public MapView()
+        public MapView(TelepulesViewModel vm)
         {
             InitializeComponent();
-            var vm = DataContext as TelepulesViewModel;
+            
             map.Center = new Microsoft.Maps.MapControl.WPF.Location(vm.SelectedTelepules.Lat,vm.SelectedTelepules.Long);
             map.ZoomLevel = 12;
         }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMagyarorszagMysql.mvvm.viewmodel;
 
 namespace WpfMagyarorszagMysql.mvvm.views
 {
@@ -26,8 +27,8 @@ namespace WpfMagyarorszagMysql.mvvm.views
 
         private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var vm=DataContext as TelepulesekView;
-            MapView map=new MapView { DataContext= vm };
+            var vm=DataContext as TelepulesViewModel;
+            MapView map = new MapView(vm);
             map.ShowDialog();
         }
     }

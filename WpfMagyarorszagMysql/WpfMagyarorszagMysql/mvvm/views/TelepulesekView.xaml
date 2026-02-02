@@ -11,7 +11,7 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Telepulesek}" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True">
+        <DataGrid ItemsSource="{Binding Telepulesek}" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True" SelectedItem="{Binding SelectedTelepules}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Irányítószám" Binding="{Binding Irszam}" />

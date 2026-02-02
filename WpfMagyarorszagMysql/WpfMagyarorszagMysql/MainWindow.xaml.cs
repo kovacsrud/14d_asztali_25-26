@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfMagyarorszagMysql.mvvm.viewmodel;
+using WpfMagyarorszagMysql.mvvm.views;
 
 namespace WpfMagyarorszagMysql
 {
@@ -19,16 +21,21 @@ namespace WpfMagyarorszagMysql
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new TelepulesViewModel();
         }
 
         private void menuitemJogallas_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm=DataContext as TelepulesViewModel;
+            JogallasView jogallasView= new JogallasView { DataContext = vm };
+            jogallasView.ShowDialog();
         }
 
         private void menuitemMegyek_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as TelepulesViewModel;
+            MegyekView megyekView = new MegyekView { DataContext = vm };
+            megyekView.ShowDialog();
         }
 
         private void menuitemTelepulesek_Click(object sender, RoutedEventArgs e)

@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MegyekView" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Megyek}" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kód" Binding="{Binding Kod}" />
+                <DataGridTextColumn Header="Név" Binding="{Binding Nev}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>

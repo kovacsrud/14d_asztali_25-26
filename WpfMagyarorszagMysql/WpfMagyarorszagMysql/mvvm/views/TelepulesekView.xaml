@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="TelepulesekView" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Telepulesek}" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Irányítószám" Binding="{Binding Irszam}" />
+                <DataGridTextColumn Header="Nev" Binding="{Binding Nev}" />
+                <DataGridTextColumn Header="Terület" Binding="{Binding Terulet}" />
+                <DataGridTextColumn Header="Népesség" Binding="{Binding Nepesseg}" />
+                <DataGridTextColumn Header="Megye" Binding="{Binding MegyekodNavigation.Nev}" />
+                <DataGridTextColumn Header="Jogállás" Binding="{Binding JogallasNavigation.Jogallas}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>

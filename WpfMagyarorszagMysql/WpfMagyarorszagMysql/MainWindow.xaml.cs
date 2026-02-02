@@ -40,7 +40,9 @@ namespace WpfMagyarorszagMysql
 
         private void menuitemTelepulesek_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as TelepulesViewModel;
+            TelepulesekView telepulesekView= new TelepulesekView {DataContext = vm };
+            telepulesekView.ShowDialog();
         }
     }
 }

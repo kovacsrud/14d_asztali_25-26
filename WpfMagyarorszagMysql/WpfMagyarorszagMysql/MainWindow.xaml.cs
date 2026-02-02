@@ -20,5 +20,20 @@ namespace WpfMagyarorszagMysql
         {
             InitializeComponent();
         }
+
+        private void menuitemJogallas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuitemMegyek_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuitemTelepulesek_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

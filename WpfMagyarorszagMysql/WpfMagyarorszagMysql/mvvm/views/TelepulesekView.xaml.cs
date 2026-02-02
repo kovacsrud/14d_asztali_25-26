@@ -23,5 +23,12 @@ namespace WpfMagyarorszagMysql.mvvm.views
         {
             InitializeComponent();
         }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm=DataContext as TelepulesekView;
+            MapView map=new MapView { DataContext= vm };
+            map.ShowDialog();
+        }
     }
 }

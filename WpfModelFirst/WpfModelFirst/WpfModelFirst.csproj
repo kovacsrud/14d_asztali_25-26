@@ -17,9 +17,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="mvvm\viewmodel\" />
-    <Folder Include="mvvm\view\" />
-  </ItemGroup>
-
 </Project>

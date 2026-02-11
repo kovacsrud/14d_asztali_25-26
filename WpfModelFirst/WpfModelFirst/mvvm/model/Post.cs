@@ -12,5 +12,9 @@ namespace WpfModelFirst.mvvm.model
         public string Title { get; set; }
         public string Body { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
+
+        public int UserId { get; set; }
+        public User User { get; set; }
+
     }
 }

@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Adatok kezelése">
+                <MenuItem x:Name="menuitemUsers" Header="Felhasználók" Click="menuitemUsers_Click"/>
+                <MenuItem x:Name="menuitemPosts" Header="Posztok" Click="menuitemPosts_Click"/>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

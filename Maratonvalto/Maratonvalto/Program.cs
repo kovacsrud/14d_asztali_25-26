@@ -58,6 +58,14 @@ namespace Maratonvalto
 
             Console.WriteLine($"Győztes csapat ideje:{gyoztesCsapatIdeje}");
 
+
+            //Idő meghatározása TimeSpam-el 
+            var gyoztesIdo = new TimeSpan(0, 0, gyoztesCsapatIdeje);
+
+            Console.WriteLine($"Győztes idő:{gyoztesIdo}");
+
+         
+
             foreach (var i in gyoztescsapat)
             {
                 Console.WriteLine($"{i.Versenyzo.Fnev}");

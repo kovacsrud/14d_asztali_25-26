@@ -15,8 +15,13 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.ColumnSpan="2" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False">
-            
+        <DataGrid ItemsSource="{Binding Dolgozok}" Grid.ColumnSpan="2" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Név" Binding="{Binding Nev}" />
+                <DataGridTextColumn Header="Anyja neve" Binding="{Binding AnyjaNeve}" />
+                <DataGridTextColumn Header="Születési dátum" Binding="{Binding SzuletesiDatum}" />
+
+            </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="buttonUj" Content="Új dolgozó" Width="200" Height="30" Grid.Row="1" Grid.ColumnSpan="2" Click="buttonUj_Click"/>
 

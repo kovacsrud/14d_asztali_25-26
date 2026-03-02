@@ -7,9 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WpfMunkaugyEF.mvvm.model;
+using PropertyChanged;
 
 namespace WpfMunkaugyEF.mvvm.viewmodel
 {
+    [AddINotifyPropertyChangedInterface]
     public class DolgozoViewModel
     {
         MunkaNyilvantartasContext context;

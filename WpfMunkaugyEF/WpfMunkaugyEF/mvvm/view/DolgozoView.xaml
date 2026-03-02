@@ -20,6 +20,14 @@
                 <DataGridTextColumn Header="Név" Binding="{Binding Nev}" />
                 <DataGridTextColumn Header="Anyja neve" Binding="{Binding AnyjaNeve}" />
                 <DataGridTextColumn Header="Születési dátum" Binding="{Binding SzuletesiDatum}" />
+                <DataGridTemplateColumn Header="Fotó">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding DolgozoKep}" Width="100" Height="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    
+                </DataGridTemplateColumn>
 
             </DataGrid.Columns>
         </DataGrid>

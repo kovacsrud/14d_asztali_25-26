@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMunkaugyEF.mvvm.viewmodel;
 
 namespace WpfMunkaugyEF.mvvm.view
 {
@@ -26,7 +27,28 @@ namespace WpfMunkaugyEF.mvvm.view
 
         private void buttonUj_Click(object sender, RoutedEventArgs e)
         {
+            var vm = DataContext as DolgozoViewModel;
+            InputDolgozo inputDolgozo = new InputDolgozo(vm);
+            inputDolgozo.ShowDialog();
+        }
+               
 
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm = DataContext as DolgozoViewModel;
+            InputDolgozo inputDolgozo = new InputDolgozo(vm, true);
+            inputDolgozo.ShowDialog();
+        }
+
+        private void buttonTorol_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as DolgozoViewModel;
+            var valasz = MessageBox.Show("Biztosan törli?", "Törlés", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz==MessageBoxResult.OK)
+            {
+                vm.Dolgozok.Remove(vm.SelectedDolgozo);
+                vm.DbMentes();
+            }
         }
     }
 }

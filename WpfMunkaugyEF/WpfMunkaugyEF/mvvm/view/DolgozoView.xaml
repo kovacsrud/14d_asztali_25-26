@@ -15,7 +15,7 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Dolgozok}" Grid.ColumnSpan="2" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding Dolgozok}" Grid.ColumnSpan="2" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False" SelectedItem="{Binding SelectedDolgozo}" MouseDoubleClick="DataGrid_MouseDoubleClick" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Név" Binding="{Binding Nev}" />
                 <DataGridTextColumn Header="Anyja neve" Binding="{Binding AnyjaNeve}" />
@@ -31,7 +31,9 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="buttonUj" Content="Új dolgozó" Width="200" Height="30" Grid.Row="1" Grid.ColumnSpan="2" Click="buttonUj_Click"/>
+        <Button x:Name="buttonUj" Content="Új dolgozó" Width="200" Height="30" Grid.Row="1" Grid.Column="0" Click="buttonUj_Click"/>
+
+        <Button x:Name="buttonTorol" Content="Kiválasztott törlése" Width="200" Height="30" Grid.Row="1" Grid.Column="1" Click="buttonTorol_Click"/>
 
 
     </Grid>

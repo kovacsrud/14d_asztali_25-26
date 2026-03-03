@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMunkaugyEF.mvvm.model;
+using WpfMunkaugyEF.mvvm.viewmodel;
 
 namespace WpfMunkaugyEF.mvvm.view
 {
@@ -19,14 +21,34 @@ namespace WpfMunkaugyEF.mvvm.view
     /// </summary>
     public partial class InputNyilvantartas : Window
     {
-        public InputNyilvantartas()
+        bool modosit = false;
+        public DolgozoViewModel VM { get; set; }
+        public Nyilvantarta AktNyilvantartas { get; set; }= new Nyilvantarta { AktivDolgozo=0 };
+        public InputNyilvantartas(DolgozoViewModel vm,bool modosit=false)
         {
             InitializeComponent();
+            DataContext = this;
+            this.modosit = modosit;
+            VM = vm;
+            this.Title = "Új dolgozó felvétele";
+            if (modosit)
+            {
+                this.Title = "Nyilvántartás módosítása";
+                AktNyilvantartas = VM.SelectedNyilvantartas;
+            }
         }
 
         private void buttonMentes_Click(object sender, RoutedEventArgs e)
         {
-
+            if (modosit)
+            {
+                VM.DbMentes();
+            } else
+            {
+                VM.Nyilvantartas.Add(AktNyilvantartas);
+                VM.DbMentes();
+            }
+            
         }
     }
 }

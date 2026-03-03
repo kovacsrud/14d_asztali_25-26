@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMunkaugyEF.mvvm.viewmodel;
 
 namespace WpfMunkaugyEF.mvvm.view
 {
@@ -22,6 +23,13 @@ namespace WpfMunkaugyEF.mvvm.view
         public NyilvantartasView()
         {
             InitializeComponent();
+        }
+
+        private void buttonUj_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as DolgozoViewModel;
+            InputNyilvantartas inputNyilvantartas = new InputNyilvantartas(vm);
+            inputNyilvantartas.ShowDialog();
         }
     }
 }

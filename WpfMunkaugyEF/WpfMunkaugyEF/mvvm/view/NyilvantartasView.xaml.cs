@@ -31,5 +31,12 @@ namespace WpfMunkaugyEF.mvvm.view
             InputNyilvantartas inputNyilvantartas = new InputNyilvantartas(vm);
             inputNyilvantartas.ShowDialog();
         }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm = DataContext as DolgozoViewModel;
+            InputNyilvantartas inputNyilvantartas = new InputNyilvantartas(vm,true);
+            inputNyilvantartas.ShowDialog();
+        }
     }
 }

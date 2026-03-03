@@ -33,7 +33,9 @@ namespace WpfMunkaugyEF
 
         private void menuitemReszlegek_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as DolgozoViewModel;
+            ReszlegView reszlegek=new ReszlegView { DataContext = vm};  
+            reszlegek.ShowDialog();
         }
 
         private void menuitemAllomany_Click(object sender, RoutedEventArgs e)

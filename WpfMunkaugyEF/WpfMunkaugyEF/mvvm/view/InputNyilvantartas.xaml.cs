@@ -13,12 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfMunkaugyEF.mvvm.model;
 using WpfMunkaugyEF.mvvm.viewmodel;
+using PropertyChanged;
 
 namespace WpfMunkaugyEF.mvvm.view
 {
     /// <summary>
     /// Interaction logic for InputNyilvantartas.xaml
     /// </summary>
+    [AddINotifyPropertyChangedInterface]
     public partial class InputNyilvantartas : Window
     {
         bool modosit = false;

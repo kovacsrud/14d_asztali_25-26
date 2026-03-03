@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="InputNyilvantartas" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Dolgozó neve:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBlock Text="Részleg:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Grid.Row="1"/>
+        <TextBlock Text="Munkaviszony kezdete:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Grid.Row="2"/>
+        <TextBlock Text="Aktív:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Grid.Row="3"/>
+        <ComboBox x:Name="comboNev" Grid.Column="1" Width="300" Height="30" FontSize="16" />
+        <ComboBox x:Name="comboReszleg" Grid.Column="1" Grid.Row="1" Width="300" Height="30" FontSize="16" />
+        <TextBox Text="" Width="300" Height="30" FontSize="20" Grid.Column="1" Grid.Row="2"/>
+        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="buttonMentes" Content="Mentés" Width="200" Height="30" Grid.Row="4" Grid.ColumnSpan="2" Click="buttonMentes_Click"/>
+
     </Grid>
 </Window>

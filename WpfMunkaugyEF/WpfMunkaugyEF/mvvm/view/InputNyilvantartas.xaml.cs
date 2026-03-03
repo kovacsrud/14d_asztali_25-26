@@ -23,5 +23,10 @@ namespace WpfMunkaugyEF.mvvm.view
         {
             InitializeComponent();
         }
+
+        private void buttonMentes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

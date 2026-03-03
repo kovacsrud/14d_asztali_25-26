@@ -29,9 +29,10 @@ namespace WpfMunkaugyEF.mvvm.view
         public InputNyilvantartas(DolgozoViewModel vm,bool modosit=false)
         {
             InitializeComponent();
-            DataContext = this;
             this.modosit = modosit;
             VM = vm;
+            DataContext = this;
+
             this.Title = "Új dolgozó felvétele";
             if (modosit)
             {
@@ -45,6 +46,7 @@ namespace WpfMunkaugyEF.mvvm.view
             if (modosit)
             {
                 VM.DbMentes();
+
             } else
             {
                 VM.Nyilvantartas.Add(AktNyilvantartas);

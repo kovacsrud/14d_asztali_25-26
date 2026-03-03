@@ -38,7 +38,9 @@ namespace WpfMunkaugyEF
 
         private void menuitemAllomany_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as DolgozoViewModel;
+            NyilvantartasView nyilvantartas=new NyilvantartasView {DataContext=vm};
+            nyilvantartas.ShowDialog();
         }
     }
 }
